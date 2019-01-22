@@ -7,7 +7,7 @@
 // @description:it      Rimuove il paywall su Rep, gli articoli premium di la Repubblica.it.
 // @author              Lucci <gabriele@lucci.xyz>, Andrea Lazzarotto
 // @match               https://rep.repubblica.it/*
-// @license             GPL version 3 or any later version http://www.gnu.org/copyleft/gpl.html
+// @license             GPL-3.0
 // ==/UserScript==
 
 const addStyle = function(css) {
