@@ -7,10 +7,10 @@
 // @description:it      Rimuove il paywall su Rep, gli articoli premium di la Repubblica.it.
 // @author              Lucci <gabriele@lucci.xyz>, Andrea Lazzarotto
 // @match               https://rep.repubblica.it/*
-// @license             GPL-3.0-or-later
+// @license             GPL version 3 or any later version http://www.gnu.org/copyleft/gpl.html
 // ==/UserScript==
 
-const addStyle = function (css) {
+const addStyle = function(css) {
   /**
    * Inject CSS into the document.
    * 
@@ -25,18 +25,17 @@ const addStyle = function (css) {
     style.textContent = css;
     parent = (document.head || document.body || document.documentElement || document);
     parent.appendChild(style);
-  }
-  catch (e) {
+  } catch (e) {
     console.log("Error: " + e);
   }
 };
 
-const redirect = function () {
-  var pwa = location.href.indexOf("/pwa/") > 0;
-  var comments = location.pathname.endsWith("/commenti");
-  if (pwa && !comments) {
-    location.href = location.href.replace("/pwa/", "/ws/detail/");
-  }
+const redirect = function() {
+    var pwa = location.href.indexOf("/pwa/") > 0;
+    var comments = location.pathname.endsWith("/commenti");
+    if (pwa && !comments) {
+        location.href = location.href.replace("/pwa/", "/ws/detail/");
+    }
 };
 
 (function () {
@@ -44,10 +43,10 @@ const redirect = function () {
   redirect()
   addStyle(
     `
-    div.detail-article_body div:not(.paywall) { 
+    div.detail-article_body > div:not(.paywall) { 
       display: none !important;
     }
-    div.detail-article_body div.paywall, 
+    div.detail-article_body > div.paywall, 
     body:not(.i-amphtml-subs-grant-yes) [subscriptions-section='content'] { 
       display: block !important; 
     }
@@ -55,4 +54,3 @@ const redirect = function () {
   );
   window.dispatchEvent(new Event('resize'));
 })()
-
