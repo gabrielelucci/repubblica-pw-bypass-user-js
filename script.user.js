@@ -10,6 +10,10 @@
 // @license             GPL-3.0-or-later
 // ==/UserScript==
 
+// ==OpenUserJS==
+// @author __lucci__
+// ==/OpenUserJS==
+
 const addStyle = function(css) {
   /**
    * Inject CSS into the document.
