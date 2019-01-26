@@ -3,7 +3,7 @@
 // @name                La Repubblica "Rep" Paywall Bypass
 // @namespace           LucciUserJS
 // @version             2.1.1
-// @description         Unhides the "paywalled" articles on Rep.
+// @description         Removes the paywall from Rep (rep.repubblica.it) articles.
 // @description:it      Rimuove il paywall su Rep, gli articoli premium di la Repubblica.it.
 // @author              Lucci <gabriele@lucci.xyz>, Andrea Lazzarotto
 // @copyright           2019, __lucci__ (https://openuserjs.org//users/__lucci__)
